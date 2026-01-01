@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, rgba(0,85,165,.45), rgba(0,140,255,.35)), url(bg.jpg) center/cover no-repeat fixed;
+    color: #123b66;
+}
+
+.page-wrapper {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.glass-box {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+h2,h3 { text-align: center; color: #003f7f; margin-bottom:20px; }
+
+.success-msg { background:#e6f8ea; color:#1e7e34; padding:14px; border-radius:10px; margin-bottom:20px; text-align:center; font-weight:500; }
+.error-msg { background:#fdecea; color:#b02a37; padding:14px; border-radius:10px; margin-bottom:20px; text-align:center; font-weight:500; }
+
+.form-box { display: grid; grid-template-columns: 1fr 1fr; gap:18px; margin-bottom:20px; }
+.form-box input { padding:14px; border-radius:12px; border:1px solid rgba(0,0,0,.15); font-size:14px; outline:none; background: rgba(255,255,255,0.85); }
+.form-box input:focus { border-color:#007bff; box-shadow:0 0 0 2px rgba(0,123,255,0.15); }
+.form-box button {
+    grid-column: span 2;
+    padding:14px;
+    font-weight:600;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+    background: linear-gradient(135deg,#007bff,#005fcc);
+    color:#fff;
+}
+.form-box button:hover { transform:translateY(-2px); box-shadow:0 10px 25px rgba(0,123,255,0.35); }
+
+/* CANCEL BUTTON */
+.cancel-btn {
+    display:inline-block;
+    text-align:center;
+    padding:14px;
+    font-weight:600;
+    border-radius:12px;
+    background: linear-gradient(135deg,#dc3545,#b52a37);
+    color:#fff;
+    text-decoration:none;
+    line-height:1.4;
+    transition:.3s;
+}
+.cancel-btn:hover { transform:translateY(-2px); box-shadow:0 10px 25px rgba(0,0,0,0.35); }
+
+/* EMPLOYEE / SALARY TABLES */
+.details-table, .payroll-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top:20px;
+    font-size:14px;
+}
+
+.details-table th, .payroll-table th {
+    text-align:left;
+    padding:12px;
+    font-weight:600;
+    background: #007bff;
+    color:#fff;
+    border-radius:8px 0 0 8px;
+}
+
+.details-table td, .payroll-table td {
+    padding:12px;
+    background: rgba(255,255,255,0.85);
+    border-radius:0 8px 8px 0;
+}
+
+.details-table tr:hover td, .payroll-table tr:hover td {
+    transform: translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+.payroll-table .total-row td { font-weight:700; background: rgba(0,123,255,0.15); }
+
+/* BUTTON VARIANTS */
+.calculate-btn { background: linear-gradient(135deg,#007bff,#005fcc); }
+.receipt-btn { background: linear-gradient(135deg,#28a745,#198754); }
+
+@media(max-width:600px){
+    .form-box { grid-template-columns: 1fr; }
+    .form-box button, .cancel-btn { grid-column: span 1; margin-bottom:10px; }
+    .details-table th, .details-table td, .payroll-table th, .payroll-table td { font-size:13px; padding:10px; }
+}

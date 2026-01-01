@@ -1,0 +1,206 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(0,85,165,.45), rgba(0,140,255,.35)), url(bg.jpg);
+    background-size: cover;
+    font-family: Poppins, sans-serif;
+    margin: 0;
+}
+
+/* LAYOUT */
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+/* GLASS CONTAINER */
+.glass-box {
+    width: 650px;
+    padding: 35px;
+    background: rgba(255,255,255,.6);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+}
+
+/* TITLES */
+h2 {
+    text-align: center;
+    color: #003f7f;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: #003f7f;
+    margin-bottom: 15px;
+}
+
+/* INFO SECTION */
+.attendance-info {
+    background: rgba(255,255,255,.7);
+    border-radius: 16px;
+    padding: 18px;
+    margin-top: 20px;
+}
+
+.attendance-info p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #2c4f73;
+}
+
+/* ALERTS */
+.success-msg {
+    background: #e6f8ea;
+    color: #1e7e34;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.error-msg {
+    background: #fdecea;
+    color: #b02a37;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* BUTTON ROW */
+.button-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* BUTTONS */
+.save-btn {
+    flex: 1;
+    background: linear-gradient(135deg,#007BFF,#005fcc);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    flex: 1;
+    background: linear-gradient(135deg,#dc3545,#b52a37);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.neutral-btn {
+    flex: 1;
+    background: #6c757d;
+    color: #fff;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* DIVIDER */
+hr {
+    border: none;
+    height: 1px;
+    background: rgba(0,0,0,.15);
+    margin: 30px 0;
+}
+
+/* ================================
+   ATTENDANCE TABLE (FORM STYLE)
+================================ */
+
+.attendance-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    font-size: 14px;
+}
+
+/* HEADER */
+.attendance-table thead th {
+    background: linear-gradient(135deg,#007BFF,#005fcc);
+    color: #fff;
+    padding: 14px;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+}
+
+.attendance-table thead th:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.attendance-table thead th:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+/* ROWS */
+.attendance-table tbody tr {
+    background: rgba(255,255,255,.75);
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.attendance-table tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0,0,0,.12);
+}
+
+/* CELLS */
+.attendance-table tbody td {
+    padding: 14px;
+    text-align: center;
+    color: #2c4f73;
+}
+
+/* ROUNDED EDGES */
+.attendance-table tbody td:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.attendance-table tbody td:last-child {
+    border-radius: 0 12px 12px 0;
+    font-weight: 600;
+}
+
+/* STATUS COLORS (SAFE & VALID) */
+.attendance-table td:last-child {
+    color: #003f7f;
+}
+
+/* EMPTY STATE */
+.attendance-table td[colspan] {
+    text-align: center;
+    font-weight: 500;
+    background: rgba(255,255,255,.6);
+    box-shadow: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .glass-box {
+        width: 95%;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+}

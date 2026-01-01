@@ -1,0 +1,151 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f4f7fb;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(180deg,#013849,#004e63);
+    color: #fff;
+    padding: 20px;
+}
+
+.logo-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    color: #e6f7fb;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(255,255,255,0.1);
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    position: fixed;
+    left: 220px;
+    right: 0;
+    height: 68px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.profile {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logout-icon {
+    color: #c33;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    margin-left: 220px;
+    padding: 92px 36px;
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.card-title {
+    font-size: 13px;
+    color: #0b4f77;
+    font-weight: 600;
+}
+
+.card-value {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+/* ===== PANEL ===== */
+.panel {
+    background: #fff;
+    margin-top: 26px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.panel-title {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.chart-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;           /* ✅ REQUIRED */
+}
+
+.chart-center canvas {
+    width: 180px !important;
+    height: 180px !important; /* ✅ REQUIRED */
+}
+
+
+
+.search {
+    position: relative;
+}
+.search input {
+    padding: 8px 10px 8px 30px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+.search i {
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    color: #777;
+}
+
+.profile-pic {
+    font-size: 26px;
+    color: #0b4f77;
+}
+
+.card.approved { border-left: 5px solid #28a745; }
+.card.pending { border-left: 5px solid #ffc107; }
+.card.rejected { border-left: 5px solid #dc3545; }
+.card.cancelled { border-left: 5px solid #6c757d; }
+
+.logout {
+    color: #c33;
+    margin-left: 8px;
+}
